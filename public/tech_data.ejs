@@ -1,0 +1,21 @@
+
+<%- include('header'); -%>
+       
+    <div class="container">
+        <div class="row justify-content-center p-lg-5 p-2">
+
+            <ul class="list-group text-md-start text-center">
+                <h3>Technology List found for <span class="text-danger"><%= url %></span></h3>
+                <% tech_data.forEach(function(data){ %>
+                    
+                        <li class="list-group-item">
+                            <img src="<%= data.icon  %>" alt="<%= data.name  %>" width="20px"> <%= data.name  %>
+                            <a href="<%= data.website  %>"> Learn More</a> 
+                        </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
